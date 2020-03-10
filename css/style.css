@@ -1,0 +1,33 @@
+.sideMenu {
+  -webkit-transition: all ease 0.5s;
+  transition: all ease 0.5s;
+}
+
+.sideMenu .navbar-collapse .navbar-nav {
+  overflow-y: auto;
+}
+
+.sideMenu .navbar-collapse.show {
+  overflow-y: auto;
+}
+
+.sideMenu .trigger {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+@media (min-width: 992px) {
+  .sideMenu {
+    -webkit-transform: translateX(calc(-350px + 64px));
+            transform: translateX(calc(-350px + 64px));
+  }
+  .sideMenu .navbar {
+    min-width: 350px;
+  }
+  .sideMenu.open {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+/*# sourceMappingURL=style.css.map */

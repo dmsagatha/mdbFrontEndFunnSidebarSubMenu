@@ -1,0 +1,34 @@
+@function rem($value) {
+  @return unquote(($value/1px)/16+"rem")
+}
+
+$width: 350px;
+
+.sideMenu {
+  transition: all ease 0.5s;
+  .navbar-collapse {
+    .navbar-nav {
+      overflow-y: auto;
+    }
+    &.show{
+      overflow-y: auto;
+    }
+  }
+  .trigger {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+}
+
+@media (min-width: 992px) {
+  .sideMenu {
+    transform: translateX(calc(-350px + 64px));
+    .navbar {
+      min-width: $width;
+    }
+    &.open {
+      transform: translateX(0);
+    }
+  }
+}
