@@ -9,9 +9,29 @@ $width: 350px;
   .navbar-collapse {
     .navbar-nav {
       overflow-y: auto;
+      font-family: 'Font Awesome 5 Free';
+      font-weight: 700;
     }
     &.show{
       overflow-y: auto;
+    }
+    .nav-link[data-toggle].collapsed:before {
+      //content: " ▾";
+      position: absolute;
+      content: "\f078";
+      font-size: 12px;
+      line-height: 10px;
+      right: 14px;
+      top: 17px;
+    }
+    .nav-link[data-toggle]:not(.collapsed):before {
+      //content: " ▴";
+      position: absolute;
+      content: "\f106";
+      font-size: 12px;
+      line-height: 10px;
+      right: 14px;
+      top: 17px;
     }
   }
   .trigger {

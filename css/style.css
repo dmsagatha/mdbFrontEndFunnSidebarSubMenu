@@ -5,10 +5,30 @@
 
 .sideMenu .navbar-collapse .navbar-nav {
   overflow-y: auto;
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 700;
 }
 
 .sideMenu .navbar-collapse.show {
   overflow-y: auto;
+}
+
+.sideMenu .navbar-collapse .nav-link[data-toggle].collapsed:before {
+  position: absolute;
+  content: "\f078";
+  font-size: 12px;
+  line-height: 10px;
+  right: 14px;
+  top: 17px;
+}
+
+.sideMenu .navbar-collapse .nav-link[data-toggle]:not(.collapsed):before {
+  position: absolute;
+  content: "\f106";
+  font-size: 12px;
+  line-height: 10px;
+  right: 14px;
+  top: 17px;
 }
 
 .sideMenu .trigger {
